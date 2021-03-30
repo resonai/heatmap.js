@@ -127,7 +127,7 @@ var Store = (function StoreClosure() {
 
 
       // reset data arrays
-      this._data = {};
+      this._data = [];
       this._radi = [];
 
       for(var i = 0; i < pointsLen; i++) {

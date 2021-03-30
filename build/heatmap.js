@@ -4,7 +4,7 @@
  * Copyright 2008-2016 Patrick Wied <heatmapjs@patrick-wied.at> - All rights reserved.
  * Dual licensed under MIT and Beerware license 
  *
- * :: 2021-03-30 19:59
+ * :: 2021-03-30 20:17
  */
 ;(function (name, context, factory) {
 
@@ -161,7 +161,7 @@ var Store = (function StoreClosure() {
 
 
       // reset data arrays
-      this._data = {};
+      this._data = [];
       this._radi = [];
 
       for(var i = 0; i < pointsLen; i++) {
