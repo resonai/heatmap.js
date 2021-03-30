@@ -72,9 +72,9 @@ var Store = (function StoreClosure() {
       var data = this._data;
       var radi = this._radi;
 
-      data.forEach(x => {
+      Object.values(data).forEach(x => {
         if (!x) { return }
-        data[x].forEach(y => {
+        Object.values(data[x]).forEach(y => {
           if (!y) { return }
           unorganizedData.push({
             x: x,
@@ -127,7 +127,7 @@ var Store = (function StoreClosure() {
 
 
       // reset data arrays
-      this._data = [];
+      this._data = {};
       this._radi = [];
 
       for(var i = 0; i < pointsLen; i++) {
