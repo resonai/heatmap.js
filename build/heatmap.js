@@ -4,7 +4,7 @@
  * Copyright 2008-2016 Patrick Wied <heatmapjs@patrick-wied.at> - All rights reserved.
  * Dual licensed under MIT and Beerware license 
  *
- * :: 2021-03-30 19:51
+ * :: 2021-03-30 19:59
  */
 ;(function (name, context, factory) {
 
@@ -106,9 +106,9 @@ var Store = (function StoreClosure() {
       var data = this._data;
       var radi = this._radi;
 
-      Object.values(data).forEach(x => {
+      Object.entries(data).forEach(([x, arr]) => {
         if (!x) { return }
-        Object.values(data[x]).forEach(y => {
+        Object.entries(arr).forEach(([y, value]) => {
           if (!y) { return }
           unorganizedData.push({
             x: x,
