@@ -72,9 +72,9 @@ var Store = (function StoreClosure() {
       var data = this._data;
       var radi = this._radi;
 
-      Object.entries(data).forEach(([x, arr]) => {
+      data.forEach((dataX, x) => {
         if (!x) { return }
-        Object.entries(arr).forEach(([y, value]) => {
+        dataX.forEach((dataY, y) => {
           if (!y) { return }
           unorganizedData.push({
             x: x,
